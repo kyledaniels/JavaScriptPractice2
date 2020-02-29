@@ -3,6 +3,8 @@ var numberOfButtons = document.querySelectorAll(".drum").length;
 
 for (var i=0; i<numberOfButtons; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click",function(){
+
+        var buttonInnerHTML = this.innerHTML;
           
       switch (buttonInnerHTML) {
           case "w":
@@ -48,8 +50,9 @@ for (var i=0; i<numberOfButtons; i++){
     });
 }
 
-document.addEventListener("keypress", function(){
+document.addEventListener("keypress", function(event){
     alert('Key was pressed');
+    console.log(event);
 })
 
 
