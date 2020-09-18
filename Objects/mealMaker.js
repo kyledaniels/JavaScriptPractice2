@@ -1,46 +1,47 @@
 const menu = {
     _courses:{
-      _appetizers:[],
-      _mains:[],
-      _desserts:[]
+      appetizers:[],
+      mains:[],
+      desserts:[]
     },
   
   addDishToCourse(courseName,dishName,dishPrice){
-    return dish = {
-      name:courseName,
+     const dish = {
+      name:dishName,
       price:dishPrice
     }    
+     return this._courses[courseName].push(dish);
   },
     get courses(){
       return {
-        appetizers:this._appetizers,
-        mains:this._mains,
+        appetizers:this.appetizers,
+        mains:this.mains,
         desserts:this._desserts
       }
     },
   
     get appetizers(){
-  
+        return this._courses.appetizers;
     },
   
     set appetizers(appetizerIn){
-  
+        this._courses.appetizers = appetizerIn
     },
   
     get mains(){
-  
+        return this._courses.mains;
     },
   
     set mains(mainsIn){
-  
+        this._courses.mains = mainsIn
     },
   
     get desserts(){
-  
+        return this._courses.desserts;
     },
   
-    set desserts(desertsIn){
-  
+    set desserts(dessertsIn){
+        this._courses.desserts = dessertsIn
     }
   
   }
