@@ -12,6 +12,15 @@ const menu = {
     }    
      return this._courses[courseName].push(dish);
   },
+
+  getRandomDishFromCourse(courseName){
+     const dishes = thise._courses[courseName];
+     const randomIndex = Math.floor(Math.random() * dishes.length)
+     return dishes[randomIndex];
+  },
+
+  
+
     get courses(){
       return {
         appetizers:this.appetizers,
